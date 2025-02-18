@@ -1,5 +1,5 @@
 # OSINTARCHIVE
-A wrapper for Wayback CDX that allows to passively enumerate a website based on history.
+A wrapper for Wayback CDX that allows to passively enumerate website endpoints based on snapshot/crawl history.
 
 ```
 Query the Wayback CDX Server (defaults: limit=10000, collapse=urlkey, fl=original)
