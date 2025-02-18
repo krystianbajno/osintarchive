@@ -3,11 +3,10 @@ A wrapper for Wayback CDX that allows to passively enumerate website endpoints b
 
 ```
 Query the Wayback CDX Server (defaults: limit=10000, collapse=urlkey, fl=original)
-
-https://archive.org/developers/wayback-cdx-server.html\n
-
 Example dork: example.com/*
 ```
+
+[https://archive.org/developers/wayback-cdx-server.html](https://archive.org/developers/wayback-cdx-server.html)
 
 ### osintarchive.ps1
 Wrapper written in PowerShell to use on Windows
