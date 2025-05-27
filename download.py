@@ -33,6 +33,7 @@ def query_wayback_all(url):
         return []
 
 def download_wayback_capture_raw(timestamp, original_url, download_dir):
+    # Use `id_` to get raw archived content without UI wrapper
     wayback_raw_url = f"https://web.archive.org/web/{timestamp}id_/{original_url}"
 
     try:
@@ -44,6 +45,7 @@ def download_wayback_capture_raw(timestamp, original_url, download_dir):
         dest_path = os.path.join(download_dir, filename)
         print(f"Downloading raw file: {wayback_raw_url} -> {dest_path}")
 
+        # HEAD request to verify content type before download
         head_req = urllib.request.Request(wayback_raw_url, method='HEAD')
         with urllib.request.urlopen(head_req) as head_resp:
             content_type = head_resp.headers.get('Content-Type', '')
